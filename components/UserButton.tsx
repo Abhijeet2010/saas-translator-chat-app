@@ -29,7 +29,12 @@ const UserButton = ({ session }: { session: Session | null }) => {
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem>{session?.user?.name}</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => signOut()}>Signout</DropdownMenuItem>
+          <DropdownMenuItem
+            className="cursor-pointer"
+            onClick={() => signOut()}
+          >
+            Signout
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     )
